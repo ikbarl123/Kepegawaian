@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\pegawai;
 use App\Models\jabatan;
+use App\Models\absensi;
 use Illuminate\Http\Request;
 
 class PegawaiController extends Controller
@@ -57,22 +58,28 @@ class PegawaiController extends Controller
     {
         //
     }
-        public function showAbsensi(pegawai $pegawai)
+
+    public function showAbsensi(pegawai $pegawai)
     {
-        //
-    }
-        public function showPenggajian(pegawai $pegawai)
-    {
-        //
-    }
-    public function saveAbsensi(Request $request)
-    {
-        //
+        
+       // return dd($pegawai);
+        return view('kepegawaian.absensi',compact('pegawai'));
     }
 
-        public function savePenggajian(Request $request)
+    public function saveAbsensi(pegawai $pegawai)
     {
-        //
+        return view('kepegawaian.tambah-absensi',compact('pegawai'));
+    }
+    public function storeAbsensi(pegawai $pegawai,request $request)
+    {
+        absensi::create([
+                'id_pegawai'=>$pegawai->id_pegawai,
+                'bulan'=>$request->bulan,
+                'tahun'=>$request->tahun,
+                'sakit'=>$request->sakit,
+                'tanpa_keterangan'=>$request->tanpa_keterangan
+            ]);
+        return redirect()->route('show.Absensi',$pegawai->id_pegawai);
     }
 
     /**
@@ -101,7 +108,7 @@ class PegawaiController extends Controller
             'nama_pegawai'=>$request->nama_pegawai,
             'jumlah_anak'=>$request->jumlah_anak,
             'id_jabatan'=>$request->id_jabatan,
-        ]);
+        ]); 
          return redirect()->route('pegawai.index');
     }
 

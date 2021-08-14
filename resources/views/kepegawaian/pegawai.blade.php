@@ -45,7 +45,10 @@ Data pegawai
                                                 <th class="text-center col-sm-1">{{$pegawais->jabatan->nama_jabatan}}</th>
                                                 <th class="text-center col-sm-1" >
                                                     <a href="{{route('pegawai.edit',$pegawais->id_pegawai)}}" class="btn btn-primary btn-sm">
-                                                        <i class="fa fa-pencil"></i>
+                                                        <i class="fa fa-pencil">Ubah</i>
+                                                    </a>
+                                                    <a href="{{route('show.Absensi',$pegawais->id_pegawai)}}" class="btn btn-primary btn-sm">
+                                                        <i class="fa fa-eye">Lihat Absensi</i>
                                                     </a>
                                                 <form action="{{route('pegawai.destroy',$pegawais->id_pegawai)}}" method="POST" class="d-inline" onsubmit="return confirm('Yakin?')">
                                                     @method('DELETE')

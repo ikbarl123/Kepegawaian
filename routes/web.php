@@ -16,10 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('/pegawai', App\Http\Controllers\PegawaiController::class);
 Route::resource('/jabatan', App\Http\Controllers\JabatanController::class);
-Route::get('/pegawai/gaji/{pegawai}', [App\Http\Controllers\JabatanController::class, 'showGaji'])->name('showGaji');;
-Route::get('/pegawai/absensi/{pegawai}', [App\Http\Controllers\JabatanController::class, 'showAbsensi'])->name('showAbsensi');;
-Route::post('/pegawai/gaji/', [App\Http\Controllers\JabatanController::class, 'saveGaji'])->name('saveGaji');;
-Route::post('/pegawai/absensi/', [App\Http\Controllers\JabatanController::class, 'saveAbsensi'])->name('saveAbsensi');;
+Route::get('/pegawai/absensi/{pegawai}', [App\Http\Controllers\PegawaiController::class, 'showAbsensi'])->name('show.Absensi');;
+Route::get('/pegawai/absensi/{pegawai}/tambah/', [App\Http\Controllers\PegawaiController::class, 'saveAbsensi'])->name('save.Absensi');
+Route::post('/pegawai/absensi/{pegawai}', [App\Http\Controllers\PegawaiController::class, 'storeAbsensi'])->name('store.Absensi');
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

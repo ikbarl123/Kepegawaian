@@ -9,7 +9,6 @@ class absensi extends Model
 {
     use HasFactory;
         public $timestamps = false;
-    public $incrementing = false;
     protected $table = "absensi";
     protected $fillable = [
     'id_pegawai',
@@ -18,4 +17,8 @@ class absensi extends Model
     'sakit',
     'tanpa_keterangan'
     ];
+        public function pegawai()
+    {
+        return $this->belongsTo(pegawai::class,'id_pegawai','id_pegawai');
+    }
 }

@@ -20,13 +20,9 @@ class pegawai extends Model
     {
         return $this->belongsTo(jabatan::class,'id_jabatan','id_jabatan');
     }
-            public function gaji() 
-    {   
-    return $this->hasMany(penggajian::class);
-    }
        public function absensi() 
     {   
-    return $this->hasMany(absensi::class);
+    return $this->hasMany(absensi::class,'id_pegawai');
     }
 
 }
