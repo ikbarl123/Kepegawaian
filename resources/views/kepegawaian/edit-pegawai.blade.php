@@ -21,8 +21,8 @@ Tambah Data
                                             <input class="form-control" name="nama_pegawai" value="{{$pegawai->nama_pegawai}}"  autofocus required>
                                         </div>
                                         <div class="form-group">
-                                            <label>Jumlah Anak</label>
-                                            <input class="form-control" name="jumlah_anak" value="{{$pegawai->jumlah_anak}}">
+                                            <label>Tanggal Masuk</label>
+                                            <input class="form-control" name="tanggal_masuk" value="{{$pegawai->tanggal_masuk}}">
                                         </div>
                                         <div class="form-group">
                                             <label>Jabatan</label>

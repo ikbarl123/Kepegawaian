@@ -28,7 +28,7 @@ class PegawaiController extends Controller
     public function create()
     {
         $jabatan = jabatan::all();
-        return view('kepegawaian.tambah-pegawai',compact('jabatan'));
+       // return view('kepegawaian.tambah-pegawai',compact('jabatan'));
     }
 
     /**
@@ -41,7 +41,7 @@ class PegawaiController extends Controller
     {
         pegawai::create([
             'nama_pegawai'=>$request->nama_pegawai,
-            'jumlah_anak'=>$request->jumlah_anak,
+            'tanggal_masuk'=>$request->tanggal_masuk,
             'id_jabatan'=>$request->id_jabatan,
             ]);
 
@@ -106,7 +106,7 @@ class PegawaiController extends Controller
         pegawai::where('id_pegawai',$pegawai->id_pegawai)
         ->update([
             'nama_pegawai'=>$request->nama_pegawai,
-            'jumlah_anak'=>$request->jumlah_anak,
+            'tanggal_masuk'=>$request->tanggal_masuk,
             'id_jabatan'=>$request->id_jabatan,
         ]); 
          return redirect()->route('pegawai.index');

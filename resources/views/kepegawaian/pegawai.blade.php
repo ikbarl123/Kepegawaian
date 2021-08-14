@@ -29,7 +29,7 @@ Data pegawai
                                             <tr>
                                                 <th class="text-center">No.</th>
                                                 <th class="text-center">Nama Pegawai</th>
-                                                <th class="text-center">Jumlah anak</th>
+                                                <th class="text-center">Tanggal Masuk</th>
                                                 <th class="text-center">Jabatan</th>
                                                 <th>aksi</th>
                                                     
@@ -41,7 +41,7 @@ Data pegawai
                                              <tr>
                                                  <th class="text-center col-sm-1">{{$loop->iteration}}</th> 
                                                 <th>{{$pegawais->nama_pegawai}}</th>
-                                                <th class="text-center col-sm-1">{{$pegawais->jumlah_anak}}</th>
+                                                <th class="text-center col-sm-1">{{$pegawais->tanggal_masuk}}</th>
                                                 <th class="text-center col-sm-1">{{$pegawais->jabatan->nama_jabatan}}</th>
                                                 <th class="text-center col-sm-1" >
                                                     <a href="{{route('pegawai.edit',$pegawais->id_pegawai)}}" class="btn btn-primary btn-sm">

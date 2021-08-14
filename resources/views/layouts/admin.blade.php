@@ -120,6 +120,7 @@
     <script src="{{asset('js/jquery.dataTables.min.js')}}"></script>
     <script src="{{asset('js/dataTables.bootstrap4.min.js')}}"></script>
     <script src="{{ asset('js/plugins/metisMenu/jquery.metisMenu.js') }}"></script>
+    <script src="{{asset('js/stisla.js')}}"></script>
 
     <!-- Page-Level Plugin Scripts - Dashboard -->
 

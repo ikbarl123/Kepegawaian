@@ -20,8 +20,8 @@ Tambah Data
                                             <input class="form-control" name="nama_pegawai"  autofocus required>
                                         </div>
                                         <div class="form-group">
-                                            <label>Jumlah Anak</label>
-                                            <input class="form-control" name="jumlah_anak">
+                                            <label>Tanggal Masuk</label>
+                                            <input type="date" name="tanggal_masuk" class="form-control" id="formGroupExampleInput" >
                                         </div>
                                        <div class="form-group">
                                             <label>Jabatan</label>
