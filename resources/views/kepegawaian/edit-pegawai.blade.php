@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('header')
-Tambah Data  
+Edit
 @endsection
 @section('content')
  <div class="row justify-content-center">
